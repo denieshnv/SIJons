@@ -54,6 +54,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
@@ -138,7 +139,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(240, 50, 90, 50);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("X");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -148,6 +149,17 @@ public class FormRegistrasi extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel8);
         jLabel8.setBounds(560, 0, 20, 20);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("-");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel11MousePressed(evt);
+            }
+        });
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(540, 0, 10, 17);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tubes/icon/background megu.png"))); // NOI18N
@@ -240,6 +252,11 @@ public class FormRegistrasi extends javax.swing.JFrame {
         this.setLocation(kordinatX-mousePX, kordinatY-mousePY);
     }//GEN-LAST:event_jLabel9MouseDragged
 
+    private void jLabel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MousePressed
+        // TODO add your handling code here:
+        this.setState(this.ICONIFIED);
+    }//GEN-LAST:event_jLabel11MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -279,6 +296,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

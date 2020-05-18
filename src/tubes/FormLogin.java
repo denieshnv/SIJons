@@ -85,6 +85,7 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -144,15 +145,25 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
         jPanel1.add(jLabel3);
         jLabel3.setBounds(270, 30, 55, 25);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("X");
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setText("-");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jLabel6MousePressed(evt);
             }
         });
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(570, 0, 10, 20);
+        jLabel6.setBounds(540, 0, 10, 20);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setText("X");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(560, 0, 10, 20);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tubes/icon/johns.jpg"))); // NOI18N
         jLabel4.setText("X");
@@ -248,6 +259,11 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
         mousePY = evt.getY();
     }//GEN-LAST:event_jLabel5MousePressed
 
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
+        // TODO add your handling code here:
+        this.setState(this.ICONIFIED);
+    }//GEN-LAST:event_jLabel7MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -292,6 +308,7 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField txtpass;
     private javax.swing.JTextField txtusername;
