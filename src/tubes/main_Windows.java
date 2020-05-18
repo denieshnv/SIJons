@@ -33,11 +33,14 @@ public class main_Windows extends javax.swing.JFrame {
     /**
      * Creates new form main_Windows
      */
+    private DefaultTableModel model;
+    
     public main_Windows() {
         initComponents();
         Show_Products_In_JTable();
         txt_id.setEnabled(true);
         txt_id.setEditable(true);
+        
     }
     String ImgPath = null;
     int pos = 0;
@@ -155,34 +158,34 @@ public class main_Windows extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         txt_price = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("ID : ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(80, 50, 29, 17);
+        jLabel1.setBounds(80, 70, 25, 20);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Nama Roti :");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 100, 74, 17);
+        jLabel2.setBounds(30, 120, 71, 20);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Harga : ");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(60, 150, 50, 17);
+        jLabel3.setBounds(60, 170, 48, 20);
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Gambar :");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(50, 250, 58, 17);
+        jLabel5.setBounds(50, 260, 56, 20);
 
         txt_id.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         txt_id.setEnabled(false);
@@ -192,7 +195,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txt_id);
-        txt_id.setBounds(140, 40, 124, 37);
+        txt_id.setBounds(140, 60, 124, 37);
 
         txt_name.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         txt_name.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +204,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txt_name);
-        txt_name.setBounds(140, 90, 124, 37);
+        txt_name.setBounds(140, 110, 124, 37);
 
         txt_jumlah.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         txt_jumlah.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -211,14 +214,14 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txt_jumlah);
-        txt_jumlah.setBounds(140, 190, 124, 37);
+        txt_jumlah.setBounds(140, 210, 124, 37);
 
         lbl_image.setBackground(new java.awt.Color(204, 255, 255));
         lbl_image.setForeground(new java.awt.Color(204, 255, 255));
         lbl_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tubes/icon/lolijump.gif"))); // NOI18N
         lbl_image.setOpaque(true);
         jPanel1.add(lbl_image);
-        lbl_image.setBounds(140, 240, 176, 124);
+        lbl_image.setBounds(140, 260, 176, 124);
 
         JTable_Products.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -237,7 +240,7 @@ public class main_Windows extends javax.swing.JFrame {
         jScrollPane1.setViewportView(JTable_Products);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(350, 0, 452, 352);
+        jScrollPane1.setBounds(330, 110, 452, 352);
 
         Btn_Choose_Image.setText("Masukkan Gambar");
         Btn_Choose_Image.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +249,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Choose_Image);
-        Btn_Choose_Image.setBounds(130, 380, 205, 25);
+        Btn_Choose_Image.setBounds(120, 400, 205, 23);
 
         Btn_Insert.setText("Tambah");
         Btn_Insert.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -260,7 +263,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Insert);
-        Btn_Insert.setBounds(40, 440, 79, 25);
+        Btn_Insert.setBounds(40, 440, 71, 23);
 
         jButton3.setText("Delete");
         jButton3.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -274,7 +277,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(260, 440, 69, 25);
+        jButton3.setBounds(260, 440, 63, 23);
 
         jButton4.setText("Update");
         jButton4.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -288,7 +291,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(150, 440, 73, 25);
+        jButton4.setBounds(150, 440, 67, 23);
 
         Btn_Last.setText("Last");
         Btn_Last.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -302,7 +305,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Last);
-        Btn_Last.setBounds(730, 530, 55, 25);
+        Btn_Last.setBounds(730, 530, 53, 23);
 
         Btn_Previous.setText("Previous");
         Btn_Previous.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -316,7 +319,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Previous);
-        Btn_Previous.setBounds(90, 530, 81, 25);
+        Btn_Previous.setBounds(90, 530, 73, 23);
 
         Btn_First.setBackground(new java.awt.Color(153, 255, 255));
         Btn_First.setText("First");
@@ -331,7 +334,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_First);
-        Btn_First.setBounds(10, 530, 57, 25);
+        Btn_First.setBounds(10, 530, 53, 23);
 
         Btn_Next.setText("next");
         Btn_Next.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -345,7 +348,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Next);
-        Btn_Next.setBounds(650, 530, 57, 25);
+        Btn_Next.setBounds(650, 530, 55, 23);
 
         jButton1.setText("LOG OUT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -354,12 +357,12 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(340, 530, 85, 25);
+        jButton1.setBounds(340, 530, 77, 23);
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Jumlah :");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(50, 200, 55, 17);
+        jLabel4.setBounds(50, 210, 50, 20);
 
         txt_price.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         txt_price.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -369,18 +372,34 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txt_price);
-        txt_price.setBounds(140, 140, 124, 37);
+        txt_price.setBounds(140, 160, 124, 37);
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Daftar Roti");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 0, 800, 50);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tubes/icon/stjohnneals2.jpg"))); // NOI18N
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(1, -4, 900, 600);
+        jLabel6.setBounds(0, 0, 900, 600);
 
-        jLabel7.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
-        jLabel7.setText("STOK ROTI");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(131, 0, 100, 30);
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 560));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -635,6 +654,7 @@ public class main_Windows extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbl_image;
     private javax.swing.JTextField txt_id;

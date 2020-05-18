@@ -45,36 +45,33 @@ public class FormRegistrasi extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtnama = new javax.swing.JTextField();
         txtuser = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtketikpassword = new javax.swing.JPasswordField();
         txtpass = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jLabel1.setText(" Konfirmasi Password   :");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(110, 330, 160, 20);
+        jLabel1.setBounds(70, 240, 220, 25);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel4.setText("Nama Akun :");
+        jLabel4.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel4.setText("Nama Akun               :");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(120, 380, 90, 20);
+        jLabel4.setBounds(80, 290, 210, 25);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel5.setText("Username  : ");
+        jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel5.setText("Username                 : ");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(120, 220, 90, 20);
+        jLabel5.setBounds(80, 140, 210, 30);
 
         txtnama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +79,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtnama);
-        txtnama.setBounds(330, 380, 160, 22);
+        txtnama.setBounds(330, 290, 160, 30);
 
         txtuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,16 +87,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtuser);
-        txtuser.setBounds(330, 220, 160, 22);
-
-        jButton1.setText("Registrasi");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(110, 500, 90, 30);
+        txtuser.setBounds(330, 140, 160, 30);
 
         jButton2.setText("back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -108,31 +96,49 @@ public class FormRegistrasi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(370, 500, 110, 30);
+        jButton2.setBounds(90, 420, 110, 30);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jLabel2.setText("REGISTER");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(270, 40, 90, 22);
+        jLabel2.setBounds(250, 40, 80, 25);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel6.setText("Password   :");
+        jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel6.setText("Password                  :");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(120, 270, 90, 20);
+        jLabel6.setBounds(80, 190, 240, 25);
         jPanel1.add(txtketikpassword);
-        txtketikpassword.setBounds(330, 330, 160, 22);
+        txtketikpassword.setBounds(330, 240, 160, 30);
 
         txtpass.setToolTipText("");
         jPanel1.add(txtpass);
-        txtpass.setBounds(330, 280, 160, 22);
+        txtpass.setBounds(330, 190, 160, 30);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Said\\Pictures\\background megu.png")); // NOI18N
+        jButton1.setText("Registrasi");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(390, 420, 90, 30);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(0, 0, 580, 970);
+        jLabel7.setBounds(0, 90, 580, 400);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 970));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 11, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

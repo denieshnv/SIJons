@@ -86,21 +86,20 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 255, 255));
         jLabel1.setText("Password :");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(50, 150, 80, 16);
+        jLabel1.setBounds(140, 150, 160, 25);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 255, 255));
         jLabel2.setText("Username : ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(48, 105, 80, 16);
+        jLabel2.setBounds(140, 110, 160, 25);
 
         txtusername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +107,7 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
             }
         });
         jPanel1.add(txtusername);
-        txtusername.setBounds(140, 100, 149, 22);
+        txtusername.setBounds(340, 110, 149, 20);
 
         txtpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,7 +115,7 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
             }
         });
         jPanel1.add(txtpass);
-        txtpass.setBounds(137, 150, 151, 22);
+        txtpass.setBounds(340, 160, 151, 20);
 
         Btn_Login.setText("Login");
         Btn_Login.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +124,7 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
             }
         });
         jPanel1.add(Btn_Login);
-        Btn_Login.setBounds(55, 255, 63, 25);
+        Btn_Login.setBounds(380, 250, 57, 23);
 
         jButton2.setText("Registrasi");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -134,18 +133,27 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(199, 255, 89, 25);
+        jButton2.setBounds(170, 250, 79, 23);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLabel3.setText("LOGIN");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(160, 30, 60, 22);
+        jLabel3.setBounds(270, 30, 55, 25);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tubes/icon/johns.jpg"))); // NOI18N
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(0, 0, 400, 310);
+        jLabel4.setBounds(0, 0, 580, 340);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 309));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
