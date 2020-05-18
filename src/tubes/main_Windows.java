@@ -675,7 +675,7 @@ public class main_Windows extends javax.swing.JFrame {
 
     private void jLabel12MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MousePressed
         // TODO add your handling code here:
-        this.setState(this.ICONIFIED);
+        System.exit(0);
     }//GEN-LAST:event_jLabel12MousePressed
 
     /**

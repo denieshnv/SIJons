@@ -261,7 +261,7 @@ JOptionPane.showMessageDialog(null,"Gagal terkoneksi Karena " + ex);
 
     private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
         // TODO add your handling code here:
-        this.setState(this.ICONIFIED);
+        System.exit(0);
     }//GEN-LAST:event_jLabel7MousePressed
 
     /**
