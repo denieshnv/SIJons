@@ -51,6 +51,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
         txtketikpassword = new javax.swing.JPasswordField();
         txtpass = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,16 +60,19 @@ public class FormRegistrasi extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 255, 255));
         jLabel1.setText(" Konfirmasi Password   :");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(70, 240, 220, 25);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(153, 255, 255));
         jLabel4.setText("Nama Akun               :");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(80, 290, 210, 25);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 255, 255));
         jLabel5.setText("Username                 : ");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(80, 140, 210, 30);
@@ -104,6 +108,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
         jLabel2.setBounds(250, 40, 80, 25);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 255, 255));
         jLabel6.setText("Password                  :");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(80, 190, 240, 25);
@@ -123,9 +128,16 @@ public class FormRegistrasi extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(390, 420, 90, 30);
 
+        jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel3.setText("REGISTER");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(240, 50, 90, 50);
+
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tubes/icon/background megu.png"))); // NOI18N
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(0, 90, 580, 400);
+        jLabel7.setBounds(0, 0, 580, 490);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -220,6 +232,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
