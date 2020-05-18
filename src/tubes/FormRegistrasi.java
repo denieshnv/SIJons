@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 public class FormRegistrasi extends javax.swing.JFrame {
         Connection con = null;
         Statement st = null;
+        int mousePX, mousePY;
         
     /**
      * Creates new form FormRegistrasi
@@ -52,9 +53,12 @@ public class FormRegistrasi extends javax.swing.JFrame {
         txtpass = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
@@ -134,10 +138,34 @@ public class FormRegistrasi extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(240, 50, 90, 50);
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("X");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel8MousePressed(evt);
+            }
+        });
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(560, 0, 20, 20);
+
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tubes/icon/background megu.png"))); // NOI18N
         jPanel1.add(jLabel7);
         jLabel7.setBounds(0, 0, 580, 490);
+
+        jLabel9.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel9MouseDragged(evt);
+            }
+        });
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel9MousePressed(evt);
+            }
+        });
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(0, 0, 580, 490);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -153,6 +181,7 @@ public class FormRegistrasi extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtnamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnamaActionPerformed
@@ -191,6 +220,25 @@ public class FormRegistrasi extends javax.swing.JFrame {
         this.setVisible(false);
         new FormLogin().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MousePressed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jLabel8MousePressed
+
+    private void jLabel9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MousePressed
+        // TODO add your handling code here:
+        mousePX = evt.getX();
+        mousePY = evt.getY();
+    }//GEN-LAST:event_jLabel9MousePressed
+
+    private void jLabel9MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseDragged
+        // TODO add your handling code here:
+        int kordinatX = evt.getXOnScreen();
+        int kordinatY = evt.getYOnScreen();
+        
+        this.setLocation(kordinatX-mousePX, kordinatY-mousePY);
+    }//GEN-LAST:event_jLabel9MouseDragged
 
     /**
      * @param args the command line arguments
@@ -237,6 +285,8 @@ public class FormRegistrasi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField txtketikpassword;
     private javax.swing.JTextField txtnama;

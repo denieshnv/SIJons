@@ -33,6 +33,8 @@ public class main_Windows extends javax.swing.JFrame {
     /**
      * Creates new form main_Windows
      */
+    
+    int mousePX, mousePY;
     private DefaultTableModel model;
     
     public main_Windows() {
@@ -162,9 +164,12 @@ public class main_Windows extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
@@ -251,7 +256,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Choose_Image);
-        Btn_Choose_Image.setBounds(120, 400, 205, 25);
+        Btn_Choose_Image.setBounds(120, 400, 205, 23);
 
         Btn_Insert.setText("Tambah");
         Btn_Insert.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -265,7 +270,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Insert);
-        Btn_Insert.setBounds(40, 440, 79, 25);
+        Btn_Insert.setBounds(40, 440, 71, 23);
 
         jButton3.setText("Delete");
         jButton3.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -279,7 +284,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(260, 440, 69, 25);
+        jButton3.setBounds(260, 440, 63, 23);
 
         jButton4.setText("Update");
         jButton4.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -293,7 +298,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(150, 440, 73, 25);
+        jButton4.setBounds(150, 440, 67, 23);
 
         Btn_Last.setText("Last");
         Btn_Last.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -307,7 +312,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Last);
-        Btn_Last.setBounds(730, 530, 55, 25);
+        Btn_Last.setBounds(730, 530, 53, 23);
 
         Btn_Previous.setText("Previous");
         Btn_Previous.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -321,7 +326,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Previous);
-        Btn_Previous.setBounds(90, 530, 81, 25);
+        Btn_Previous.setBounds(90, 530, 73, 23);
 
         Btn_First.setBackground(new java.awt.Color(153, 255, 255));
         Btn_First.setText("First");
@@ -336,7 +341,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_First);
-        Btn_First.setBounds(10, 530, 57, 25);
+        Btn_First.setBounds(10, 530, 53, 23);
 
         Btn_Next.setText("next");
         Btn_Next.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -350,7 +355,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Btn_Next);
-        Btn_Next.setBounds(650, 530, 57, 25);
+        Btn_Next.setBounds(650, 530, 55, 23);
 
         jButton1.setText("LOG OUT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -359,7 +364,7 @@ public class main_Windows extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(340, 530, 85, 25);
+        jButton1.setBounds(340, 530, 77, 23);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Jumlah :");
@@ -390,10 +395,21 @@ public class main_Windows extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Daftar Roti");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
+        jLabel7.setText("X");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, -1, -1));
+
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Daftar Roti");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 800, 50);
@@ -401,6 +417,19 @@ public class main_Windows extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tubes/icon/stjohnneals2.jpg"))); // NOI18N
         jPanel1.add(jLabel6);
         jLabel6.setBounds(0, 0, 900, 600);
+
+        jLabel11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel11MouseDragged(evt);
+            }
+        });
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel11MousePressed(evt);
+            }
+        });
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(0, 0, 800, 560);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -414,6 +443,7 @@ public class main_Windows extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Btn_InsertComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_Btn_InsertComponentHidden
@@ -612,6 +642,25 @@ public class main_Windows extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_jumlahActionPerformed
 
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jLabel7MousePressed
+
+    private void jLabel11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseDragged
+        // TODO add your handling code here:
+        int kordinatX = evt.getXOnScreen();
+        int kordinatY = evt.getYOnScreen();
+        
+        this.setLocation(kordinatX-mousePX, kordinatY-mousePY);
+    }//GEN-LAST:event_jLabel11MouseDragged
+
+    private void jLabel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MousePressed
+        // TODO add your handling code here:
+        mousePX = evt.getX();
+        mousePY = evt.getY();
+    }//GEN-LAST:event_jLabel11MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -659,6 +708,8 @@ public class main_Windows extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
